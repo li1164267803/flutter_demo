@@ -1,6 +1,6 @@
-# flutter01
+# flutter_dome
 
-A new Flutter project.
+一个刚刚用来学习 flutter 的项目
 
 ## Getting Started
 
