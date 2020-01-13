@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,28 +22,16 @@ class MyApp extends StatelessWidget {
 class MyHome extends StatelessWidget {
   // 自定义方法
   List<Widget> _getData() {
-    return [
-      ListTile(
-        leading: Icon(Icons.home),
-        title: Text('wenbn1'),
-        subtitle: Text('二级文本'),
-      ),
-      ListTile(
-        leading: Icon(Icons.http, color: Colors.red),
-        title: Text('wenbn2'),
-        subtitle: Text('二级文本'),
-      ),
-      ListTile(
-        leading: Icon(Icons.import_export),
-        title: Text('wenbn3'),
-        subtitle: Text('二级文本'),
-      ),
-      ListTile(
-        leading: Icon(Icons.hotel),
-        title: Text('wenbn4'),
-        subtitle: Text('二级文本'),
-      )
-    ];
+    List<Widget> list = new List();
+    for (var i = 0; i < 20; i++) {
+      list.add(ListTile(
+        leading: Icon(Icons.inbox, size: 30),
+        title: Text('文本$i列表'),
+        subtitle: Text('循环的$i的标题'),
+        trailing: Icon(Icons.layers),
+      ));
+    }
+    return list;
   }
 
   @override

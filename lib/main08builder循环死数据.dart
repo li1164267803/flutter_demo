@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,20 +20,22 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHome extends StatelessWidget {
-  // 自定义方法
-  Widget _getListData(content, index) {
-    return ListTile(
-      leading: Image.network(listData[index]["imageUrl"]),
-      title: Text(listData[index]["title"]),
-      subtitle: Text(listData[index]["author"]),
-    );
+  final list = new List();
+  MyHome() {
+    for (var i = 1; i <= 20; i++) {
+      this.list.add('我是第$i条');
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: listData.length,
-      itemBuilder: this._getListData,
+      itemCount: this.list.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(this.list[index]),
+        );
+      },
     );
   }
 }
