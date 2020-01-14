@@ -24,29 +24,9 @@ class MyHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-      width: 800,
+    return IconContainer(
+      Icons.home,
       color: Colors.pink,
-      child: Column(
-        children: <Widget>[
-          Container(height: 180, color: Colors.black),
-          Row(
-            children: <Widget>[
-              Expanded(
-                flex: 2,
-                child: Image.network(
-                    'https://www.itying.com/images/flutter/2.png'),
-              ),
-              Expanded(
-                flex: 1,
-                child: Image.network(
-                    'https://www.itying.com/images/flutter/3.png'),
-              ),
-            ],
-          ),
-        ],
-      ),
     );
   }
 }
