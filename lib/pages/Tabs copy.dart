@@ -39,7 +39,14 @@ class _TabsState extends State<Tabs> {
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
           BottomNavigationBarItem(
               icon: Icon(Icons.category), title: Text("分类")),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("设置"))
+          BottomNavigationBarItem(
+              icon:
+                  Image.network('https://www.itying.com/images/flutter/1.png'),
+              title: Text("设置")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), title: Text("设置")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), title: Text("设置")),
         ],
       ),
     );

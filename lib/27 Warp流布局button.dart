@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -68,6 +67,5 @@ class MyButton extends StatelessWidget {
       textColor: Theme.of(context).accentColor,
       onPressed: () {},
     );
-    ;
   }
 }
