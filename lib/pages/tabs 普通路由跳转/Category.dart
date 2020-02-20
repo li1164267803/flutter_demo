@@ -15,7 +15,15 @@ class _CategoryPageState extends State<CategoryPage> {
       children: <Widget>[
         RaisedButton(
           child: Text('跳转到表单'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => FormPage(
+                  title: '动态传值数据',
+                ),
+              ),
+            );
+          },
           color: Colors.yellow,
           textColor: Colors.red,
         ),

@@ -15,7 +15,11 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         RaisedButton(
           child: Text('跳转到搜索页面'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => SearchPage()),
+            );
+          },
           color: Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
         )
