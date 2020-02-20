@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../Form.dart';
 
 class CategoryPage extends StatefulWidget {
   CategoryPage({Key key}) : super(key: key);
@@ -15,7 +14,9 @@ class _CategoryPageState extends State<CategoryPage> {
       children: <Widget>[
         RaisedButton(
           child: Text('跳转到表单'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/form');
+          },
           color: Colors.yellow,
           textColor: Colors.red,
         ),
